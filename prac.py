@@ -12,8 +12,7 @@ cnt = 0
 for j in money:
     cnt = cnt + (total // j)
     total = total % j
-    
+
 print(cnt)
-        
 
     
