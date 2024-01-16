@@ -15,4 +15,5 @@ while True:
                 print(f"{arr[i]} + ", end='')
             print(arr[-1])
         else:
+    
             print(f"{a} is NOT perfect.")
