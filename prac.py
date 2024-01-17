@@ -13,4 +13,5 @@ for i in arr:
             cnt = cnt + 1
     if cnt == 2:
         total += 1
+        
 print(total)
