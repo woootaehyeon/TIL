@@ -1,17 +1,19 @@
 import sys
 
-n = int(sys.stdin.readline())
-arr = list(map(int, sys.stdin.readline().split()))
-total = 0
-if 1 in arr:
-    arr.remove(1)
+a = int(sys.stdin.readline())
+b = int(sys.stdin.readline())
+arr = []
 
-for i in arr:
+for i in range (a, b+1):
     cnt = 0
-    for j in range(1,i+1):
+    for j in range(1, i+1):
         if i % j == 0:
             cnt = cnt + 1
     if cnt == 2:
-        total += 1
-        
-print(total)
+        arr.append(i)
+
+if len(arr) == 0:
+    print(-1)
+else:
+    print(sum(arr))
+    print(min(arr))
