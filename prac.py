@@ -1,17 +1,18 @@
 import sys
-while True:
-    a = int(sys.stdin.readline().rstrip())
-    if a == -1:
-        break
-    else:
-        arr = []
-        for i in range(1,a):
-            if a % i == 0:
-                arr.append(i)
-        if sum(arr) == a:
-            print(f"{a} = ", end='')
-            for i in range(len(arr) - 1):
-                print(f"{arr[i]} + ", end='')
-            print(arr[-1])
-        else:
-            print(f"{a} is NOT perfect.")
+
+n = int(sys.stdin.readline())
+arr = list(map(int, sys.stdin.readline().split()))
+total = 0
+if 1 in arr:
+    arr.remove(1)
+
+for i in arr:
+    cnt = 0
+    for j in range(1,i+1):
+        if i % j == 0:
+            cnt = cnt + 1
+    if cnt == 2:
+        total += 1
+
+print(total)
+        
