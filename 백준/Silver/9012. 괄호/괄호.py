@@ -1,8 +1,9 @@
-t = int(input())
-for i in range(t):
+import sys
+n = int(sys.stdin.readline())
+for i in range(n):
     stack = []
-    s = input()
-    isTF = True
+    s = sys.stdin.readline().rstrip()
+    TF = True
 
     for j in s:
         if j == '(':
@@ -11,9 +12,9 @@ for i in range(t):
             if stack:
                 stack.pop()
             elif not stack:
-                isTF = False
+                TF = False
                 break
-    if not stack and isTF:
+    if not stack and TF == True:
         print('YES')
-    elif stack or not isTF:
+    elif stack or TF == False:
         print('NO')
