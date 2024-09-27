@@ -1,11 +1,11 @@
 import sys
 
 def factorial(n):
-    if n <= 1:
-        ans = 1
+    if n < 2:
+        return 1
     else:
-        ans = factorial(n-1) * n
-        
-    return ans
+        return n * factorial(n-1)
 
-print(factorial(int(sys.stdin.readline())))
+n = int(sys.stdin.readline())
+print(factorial(n))
+        
