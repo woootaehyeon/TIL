@@ -1,13 +1,12 @@
 import sys
 
-def fido(n):
-    if n == 1 or n == 2:
-        ans = 1
-    elif n == 0:
-        ans = 0
+def fibo(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
     else:
-        ans = fido(n-1) + fido(n-2)
-    
-    return ans
+        return fibo(n-2) + fibo(n-1)
 
-print(fido(int(sys.stdin.readline())))
+n = int(sys.stdin.readline())
+print(fibo(n))
