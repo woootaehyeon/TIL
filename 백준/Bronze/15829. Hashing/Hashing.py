@@ -1,9 +1,15 @@
+import math
 import sys
-p = int(sys.stdin.readline())
-s = sys.stdin.readline().rstrip()
-sum = 0
-num = 0
-for i in s:
-    sum = sum + (ord(i)-96) * 31**(num)
-    num = num + 1
-print(sum)
+
+r = 31
+m = 1234567891
+
+n = int(sys.stdin.readline().strip())
+s = sys.stdin.readline().strip()
+hash = 0
+
+for i in range(len(s)):
+    # print(ord(i) - 96)
+    hash += (ord(s[i]) - 96) * r**i
+
+print(hash % m)
